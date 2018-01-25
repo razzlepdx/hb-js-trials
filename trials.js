@@ -27,9 +27,9 @@ phoneNumbers.set('Google', '503-123-1234');
 function accountInfo(accountHolder, accountNumber, businessName) {
     // Prints account information.
 
-    console.log("Account Holder Name:", accountHolder);
-    console.log("Account Holder #", accountNumber);
-    console.log("Business Name:", businessName);
+    console.log(`Account Holder Name: ${accountHolder}`);
+    console.log(`Account Holder # ${accountNumber}`);
+    console.log(`Business Name: ${businessName}`);
 
 }
 
@@ -54,7 +54,7 @@ function showPhone(phoneNumbers) {
     console.log("Phone Numbers:");
 
     for (let [type, number] of phoneNumbers) {
-        console.log(type + ":", number);
+        console.log(`${type}: ${number}`);
     }
 }
 
@@ -64,9 +64,19 @@ function showPhone(phoneNumbers) {
 
 // Create a map of transactions
 
+let transactions = new Map([
+    ['May-2', '-500'],
+    ['May-13', '+1,200'],
+    ['May-15', '-100'],
+    ['May-21', '-359'],
+    ['May-29', '+2,200']]);
+
 
 // Add function to add transactions
 
+function addTransaction(date, amt) {
+    // Takes a
+}
 
 // Add function to show balance status
 
