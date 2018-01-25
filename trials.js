@@ -66,22 +66,65 @@ function showPhone(phoneNumbers) {
 
 let transactions = new Map([
     ['May-2', '-500'],
-    ['May-13', '+1,200'],
+    ['May-13', '+1200'],
     ['May-15', '-100'],
     ['May-21', '-359'],
-    ['May-29', '+2,200']]);
+    ['May-29', '+2200']]);
 
 
 // Add function to add transactions
 
 function addTransaction(date, amt) {
-    // Takes a
+    // Takes a date and amount and stores it as a transaction.
+
+    transactions.set(date, amt);
 }
 
 // Add function to show balance status
 
+function showBalanceStatus(balance) {
+    // Displays balance. Warns user if balance is low or overdrawn.
+
+    console.log(`Balance: ${balance}`);
+
+    if (balance < 0) {
+        console.log("YOU ARE OVERDRAWN");
+    } else if (balance < 20) {
+        console.log("Warning: You are close to zero balance.");
+    } else {
+        console.log("Thank you for your business!");
+    }
+
+}
+
 
 // Add function to show transactions
+
+function showTransactions(transactions, balance) {
+    //
+    console.log(`Starting balance: ${balance}`);
+
+    let transactionType;
+
+    for (let [date, amt] of transactions) {
+        if (amt[0] === '-') {
+            transactionType = 'withdrawal';
+            balance -= Number(amt.slice(1));
+        } else {
+            transactionType = 'deposit';
+            balance += Number(amt.slice(1));
+        }
+
+        console.log(`${date}: ${transactionType} ${amt} | balance: ${balance}`);
+
+        if (balance < 0 && transactionType === 'withdrawal')  {
+            balance -= 25;
+            console.log("Warning: Your balance has fallen below zero.");
+            console.log("A $25 fee has been charged to your account.");
+            console.log(`Your new balance is: ${balance}`);
+        }
+    }
+}
 
 
 // ///////////////////////////////////////////////////////
