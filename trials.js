@@ -154,6 +154,13 @@ function addProperties(customerInfo, melon='Canteloupe', numPets=0) {
 // ///////////////////////////////////////////////////////
 // Getting a Business Loan
 
+// conditional for customerInfo.faveMelon === 'Casaba' OR the pet thing
+// preferredCustomer var we can set to True or False ^^^^^^^^
+
+// 3 tiers of income, < 100,000 ; 8%, 5% if PC
+// 100,000 - 200,000 ; 7%, 4% if PC
+// > 200,000, 4%
+
 
 // Function to return loan rate
 
