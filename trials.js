@@ -17,7 +17,7 @@ const phoneNumbers = new Map([
 
 // Add some phone numbers to our map
 
-phoneNumbers.set('cell', '503-123-1234');
+phoneNumbers.set('Google', '503-123-1234');
 
 // ///////////////////////////////////////////////////////
 // Create User Info Display:
@@ -48,6 +48,15 @@ function showAddresses(addresses) {
 
 
 // Add function to print phone types and numbers
+
+function showPhone(phoneNumbers) {
+    // Shows all numbers.
+    console.log("Phone Numbers:");
+
+    for (let [type, number] of phoneNumbers) {
+        console.log(type + ":", number);
+    }
+}
 
 
 // ///////////////////////////////////////////////////////
