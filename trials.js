@@ -101,7 +101,7 @@ function showBalanceStatus(balance) {
 // Add function to show transactions
 
 function showTransactions(transactions, balance) {
-    //
+    // Displays how user's balance changes for every withdrawal/deposit.
     console.log(`Starting balance: ${balance}`);
 
     let transactionType;
@@ -130,11 +130,26 @@ function showTransactions(transactions, balance) {
 // ///////////////////////////////////////////////////////
 // All Customer Info:
 
-// Make a Map of customer info
+// Make a Map of customer info (?????????)
+
+let customerInfo = {
+    "accountHolder": accountHolder,
+    "accountNumber": accountNumber,
+    "businessName": businessName,
+    "addresses": addresses,
+    "phoneNumbers": phoneNumbers,
+    "transactions": transactions,
+    "startingBalance": 26000
+};
 
 
 // Function to add customer attributes
 
+function addProperties(customerInfo, melon='Canteloupe', numPets=0) {
+    //
+    customerInfo.faveMelon = melon;
+    customerInfo.pets = numPets;
+}
 
 // ///////////////////////////////////////////////////////
 // Getting a Business Loan
